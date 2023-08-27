@@ -3,6 +3,8 @@ const build = require('./sub-functions/build.js')
 const equipDirt = require('./sub-functions/equipDirt.js')
 const itemToString = require('./sub-functions/itemToString.js')
 
+const {buildScheme} = require('./sub-functions/build-scheme.js')
+
 // Chat commands
 function registerChatCommands(bot) {
     bot.on('chat', async (username, message) => {
@@ -100,6 +102,12 @@ function registerChatCommands(bot) {
             case 'equip dirt':
                 equipDirt()
                 break
+
+
+            case 'build scheme':
+                bot.on('chat', async (username, message) => {
+                    buildScheme(bot, message)
+                })
         }
     })
 }
