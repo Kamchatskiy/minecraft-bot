@@ -9,6 +9,7 @@
   "dependencies": {
     "mineflayer": "^4.12.0",
     "mineflayer-auto-eat": "^3.3.6",
+    "mineflayer-radar": "^0.0.2",
     "mineflayer-web-inventory": "^1.8.4",
     "prismarine-viewer": "^1.25.0"
   },

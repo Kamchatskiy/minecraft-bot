@@ -1,4 +1,7 @@
-const dig = require('./dig.js')
+const dig = require('./sub-functions/dig.js')
+const build = require('./sub-functions/build.js')
+const equipDirt = require('./sub-functions/equipDirt.js')
+const itemToString = require('./sub-functions/itemToString.js')
 
 // Chat commands
 function registerChatCommands(bot) {

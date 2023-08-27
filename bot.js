@@ -1,8 +1,9 @@
 const mineflayer = require('mineflayer')
 const mineflayerViewer = require('prismarine-viewer').mineflayer
 const inventoryViewer = require('mineflayer-web-inventory')
+const radarPlugin = require('mineflayer-radar')(mineflayer);
 
-const chat = require("./components/chat.js")
+const chat = require("./functions/chat.js")
 
 if (process.argv.length < 4 || process.argv.length > 6) {
     console.log('Usage : node bot.js <host> <port> [<name>] [<password>]')
@@ -16,12 +17,17 @@ const bot = mineflayer.createBot({
     password: process.argv[5]
 })
 
+var radarOptions = {
+    host: '0.0.0.0', // optional
+    port: 0,         // optional
+  }
+
 bot.once('spawn', () => {
+    inventoryViewer(bot) // 3000 port
     mineflayerViewer(bot, { port: 3001, firstPerson: true })
     mineflayerViewer(bot, { port: 3002, firstPerson: false })
-    inventoryViewer(bot)
+    radarPlugin(bot, radarOptions);
 })
-
 chat.registerChatCommands(bot)
 
 // DEBUG
