@@ -1,7 +1,9 @@
 const { Schematic } = require('prismarine-schematic')
-const { builder, Build } = require('mineflayer-builder')
+const { Build } = require('mineflayer-builder')
 const path = require('path')
 const fs = require('fs').promises
+
+function wait (ms) { return new Promise(resolve => setTimeout(resolve, ms)) }
 
 async function buildScheme(bot, schemeName) {
     const schematic = await Schematic.read(await fs.readFile(path.resolve(__dirname, '../../schematics/', schemeName)), bot.version)

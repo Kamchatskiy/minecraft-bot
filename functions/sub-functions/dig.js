@@ -20,4 +20,4 @@ async function dig() {
 
 module.exports = {
     dig
-};
+}

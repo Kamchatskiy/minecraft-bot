@@ -15,4 +15,4 @@ async function equipDirt() {
 
 module.exports = {
     equipDirt
-};
+}
