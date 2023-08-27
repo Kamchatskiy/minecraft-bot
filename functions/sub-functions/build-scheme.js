@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { Schematic } = require('prismarine-schematic')
 const { Build } = require('mineflayer-builder')
 const path = require('path')

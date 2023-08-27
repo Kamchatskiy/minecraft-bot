@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const dig = require('./sub-functions/dig.js')
 const build = require('./sub-functions/build.js')
 const equipDirt = require('./sub-functions/equipDirt.js')
