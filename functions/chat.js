@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 /* eslint-disable no-undef */
 const dig = require('./sub-functions/dig.js')
 const build = require('./sub-functions/build.js')
@@ -95,7 +96,7 @@ function registerChatCommands(bot) {
             }
             break
         case 'dig':
-            dig()
+            dig(bot)
             break
         case 'build':
             build()

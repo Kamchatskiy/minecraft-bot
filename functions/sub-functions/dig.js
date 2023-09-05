@@ -1,4 +1,4 @@
-async function dig() {
+async function dig(bot) {
     let target
     if (bot.targetDigBlock) {
         bot.chat(`already digging ${bot.targetDigBlock.name}`)
